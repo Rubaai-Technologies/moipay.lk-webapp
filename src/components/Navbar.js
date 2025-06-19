@@ -16,14 +16,14 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   return (
-    <nav className="w-full max-w-6xl mx-auto px-10 py-5 md:bg-white/10 md:rounded-[10px] md:border md:border-[#87DFCA] md:backdrop-blur-[9.9px] md:mt-8 flex justify-start items-center md:gap-32 gap-10">
+    <nav className="w-full max-w-5xl mx-auto px-10 py-4 md:bg-white/10 md:rounded-[10px] md:border md:border-[#87DFCA] md:backdrop-blur-[9.9px] md:mt-8 flex justify-start items-center md:gap-32 gap-10">
       {/* Logo */}
       <div className="flex items-center">
         <img src={moiPay} alt="MOI PAY" className="md:h-12 md:w-12 h-12 w-20" />
       </div>
 
       {/* Desktop Navigation Links */}
-      <div className="hidden md:flex items-center gap-11">
+      <div className="hidden md:flex items-center gap-8">
         {menuItems.map(item => (
           <button
             key={item.label}
