@@ -24,8 +24,7 @@ const HomeHeroSection = () => {
                     flexDirection: "column",
                     px: { xs: 2, md: 6 },
                     py: 4,
-                    mx: { xs: 1, md: 15 },
-
+                    
                 }}
             >
                 {/* Heading Section */}

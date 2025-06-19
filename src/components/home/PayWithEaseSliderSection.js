@@ -17,9 +17,9 @@ const PayWithEaseSliderSection = ({ slides }) => (
       bgcolor: { xs: 'transparent', md: 'rgba(20, 21, 22, 0.5)' },
       color: '#F4F4F4',
       borderRadius: { xs: 0, md: 4 },
-      px: { xs: 2, md: 10 },
+      px: { xs: 2, md: 6 },
       pr: { xs: 2, md: 10 },
-      py: { xs: 4, md: 8 },
+      py: { xs: 4, md: 2 },
       minHeight: { xs: 'auto', md: 500 },      
     }}
   >
