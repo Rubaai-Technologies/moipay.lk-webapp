@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Button, Stack, Avatar, Paper } from "@mui/material";
+import { Box, Typography, Stack, Avatar } from "@mui/material";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import moipayPhone from "../../assets/logo/home/home_screen.png";
 
@@ -18,7 +18,7 @@ const HomeHeroSection = () => {
                 minHeight: "100vh",
                 display: "flex",
                 flexDirection: "column",
-                px: { xs: 6, md: 6 },
+                px: { xs: 2, md: 6 },
                 py: 4,
             }}
         >
@@ -55,11 +55,11 @@ const HomeHeroSection = () => {
                 }}
             >
                 {/* Left Content - Desktop View */}
-                <Box sx={{ 
-                    flex: 1, 
-                    display: { xs: "none", md: "flex" }, 
-                    flexDirection: "column", 
-                    gap: 4 
+                <Box sx={{
+                    flex: 1,
+                    display: { xs: "none", md: "flex" },
+                    flexDirection: "column",
+                    gap: 4
                 }}>
                     <Typography
                         variant="body1"
@@ -69,7 +69,7 @@ const HomeHeroSection = () => {
                             fontFamily: 'Inter, sans-serif',
                             fontWeight: 400,
                             lineHeight: '25.6px',
-                            width:  '100%',
+                            width: '100%',
                             maxWidth: { xs: 150, md: 450 },
                             textAlign: 'left',
                             alignSelf: 'flex-start',
@@ -285,10 +285,10 @@ const HomeHeroSection = () => {
                 </Box>
 
                 {/* Mobile Content - Reordered for mobile view */}
-                <Box sx={{ 
-                    flex: 1, 
-                    display: { xs: "flex", md: "none" }, 
-                    flexDirection: "column", 
+                <Box sx={{
+                    flex: 1,
+                    display: { xs: "flex", md: "none" },
+                    flexDirection: "column",
                     gap: 4,
                     order: { xs: 2, md: 1 }
                 }}>
@@ -464,8 +464,69 @@ const HomeHeroSection = () => {
                     </Stack>
                 </Box>
             </Box>
+            <RubaaiRevolutionSection />
         </Box>
     );
 };
+
+// Rubaai Revolution Section
+export const RubaaiRevolutionSection = () => (
+    <Box
+        sx={{
+            width: '100%',
+            px: { xs: 1, md: 22 }, // reduced padding for mobile
+            py: { xs: 2, md: 5.5 }, // reduced vertical padding for mobile
+            background: 'var(--color-grey-10, #18171A)',
+            borderRadius: 2,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: { xs: 2, md: 3 },
+            my: { xs: 2, md: 4 },
+        }}
+    >
+        <Box
+            sx={{
+                width: { xs: '100%', md: 894 }, // full width on mobile
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: { xs: 2, md: 2 },
+            }}
+        >
+            <Typography
+                sx={{
+                    textAlign: 'center',
+                    color: 'white',
+                    fontSize: { xs: 24, sm: 24, md: 55 },
+                    fontFamily: '"Wix Madefor Display", sans-serif',
+                    fontWeight: 700,
+                    lineHeight: { xs: '48px', sm: '68px', md: '88px' },
+                    whiteSpace: 'nowrap',
+                    overflowX: { xs: 'auto', md: 'visible' },
+                }}
+            >
+                Join the Rubaai Revolution
+            </Typography>
+            <Typography
+                sx={{
+                    width: { xs: '100%', md: 900 },
+                    textAlign: 'center',
+                    color: 'var(--color-grey-64, #A1A1A6)',
+                    fontSize: { xs: 14, sm: 14, md: 24 },
+                    fontFamily: '"Wix Madefor Display", sans-serif',
+                    fontWeight: 700,
+                    lineHeight: { xs: '28px', sm: '32px', md: '38.4px' },
+                    wordWrap: 'break-word',
+                    mt: 0,
+                }}
+            >
+                Become part of a community transforming the future of finance. With Rubaai,<br />
+                you're always connected to your loved ones and financial goals.
+            </Typography>
+        </Box>
+    </Box>
+);
 
 export default HomeHeroSection;                    
