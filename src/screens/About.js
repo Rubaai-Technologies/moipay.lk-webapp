@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import AboutUsComponent from '../components/about_us/about_us_component';
 
 export default function About() {
   return (
-    <div className="flex flex-1 items-center justify-center h-[70vh]">
-      <h1 className="text-3xl font-bold text-center">About Us</h1>
-    </div>
+    <Fragment>
+      <AboutUsComponent />
+    </Fragment>
   );
 } 
