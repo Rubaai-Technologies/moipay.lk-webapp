@@ -1,7 +1,8 @@
 import React from "react";
 import { Box, Typography, Stack, Avatar } from "@mui/material";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
-import moipayPhone from "../../assets/logo/home/home_screen.png";
+import moipayPhone from "../../assets/home/home_screen.png";
+import whyMoiPay from "../../assets/home/random_img_01.png";
 
 const avatars = [
     "https://randomuser.me/api/portraits/men/32.jpg",
@@ -20,6 +21,8 @@ const HomeHeroSection = () => {
                 flexDirection: "column",
                 px: { xs: 2, md: 6 },
                 py: 4,
+                mx: { xs: 1, md: 20 },
+
             }}
         >
             {/* Heading Section */}
@@ -52,6 +55,7 @@ const HomeHeroSection = () => {
                     justifyContent: "center",
                     gap: 2,
                     flex: 1,
+
                 }}
             >
                 {/* Left Content - Desktop View */}
@@ -465,6 +469,7 @@ const HomeHeroSection = () => {
                 </Box>
             </Box>
             <RubaaiRevolutionSection />
+            <WhyMoiPaySection />
         </Box>
     );
 };
@@ -473,7 +478,7 @@ const HomeHeroSection = () => {
 export const RubaaiRevolutionSection = () => (
     <Box
         sx={{
-            width: '100%',
+            width: { xs: '100%', md: '100%' },
             px: { xs: 1, md: 22 }, // reduced padding for mobile
             py: { xs: 2, md: 5.5 }, // reduced vertical padding for mobile
             background: 'var(--color-grey-10, #18171A)',
@@ -528,5 +533,139 @@ export const RubaaiRevolutionSection = () => (
         </Box>
     </Box>
 );
+
+// Why Moi Pay Section
+export const WhyMoiPaySection = () => {
+    // Replace with your actual image import if available
+
+    const points = [
+        "Empowering You to Take Control of Your Finances",
+        "Innovative Technology: Harness the power of next-gen fintech.",
+        "Seamless Experience: Easy-to-use app with intuitive design.",
+        "Global Reach: Connect Sri Lankans worldwide with fast, secure services.",
+        "Trusted Partners: Collaborating with top financial institutions."
+    ];
+    return (
+        <Box
+            sx={{
+                width: '100%',
+                my: { xs: 2, md: 4 },
+                px: { xs: 1, md: 0 },
+                display: 'flex',
+                flexDirection: { xs: 'column', md: 'row' },
+                alignItems: { xs: 'stretch', md: 'flex-start' },
+                justifyContent: 'center',
+                gap: { xs: 2, md: 6 },
+            }}
+        >
+            {/* Image */}
+            <Box
+                sx={{
+                    flex: { xs: 'unset', md: 2 },
+                    width: { xs: '100%', md: 540 },
+                    minWidth: { md: 340 },
+                    maxWidth: { md: 650 },
+                    alignSelf: { xs: 'center', md: 'stretch' },
+                    mb: { xs: 2, md: 0 },
+                    height: { md: 'auto' },
+                    display: 'flex',
+                }}
+            >
+                <Box
+                    component="img"
+                    src={whyMoiPay}
+                    alt="Why Moi Pay"
+                    sx={{
+                        width: '100%',
+                        height: { xs: 180, sm: 220, md: '100%' },
+                        objectFit: 'cover',
+                        borderRadius: 4,
+                        boxShadow: 2,
+                    }}
+                />
+            </Box>
+            {/* Text Content */}
+            <Box
+                sx={{
+                    flex: 1.5,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                    alignItems: 'flex-start',
+                    gap: { xs: 2, md: 3 },
+                    width: '100%',
+                    maxWidth: 700,
+                    mx: 'auto',
+                }}
+            >
+                {/* Title */}
+                <Typography
+                    variant="h2"
+                    sx={{
+                        textAlign: { xs: 'center', md: 'left' },
+                        color: '#fff',
+                        fontFamily: '"Wix Madefor Display", sans-serif',
+                        fontWeight: 700,
+                        fontSize: { xs: 24, md: 38 },
+                        lineHeight: { xs: '36px', md: '56px' },
+                        mb: { xs: 1, md: 2 },
+                        width: '100%',
+                    }}
+                >
+                    Why Moi Pay ?
+                </Typography>
+                {/* Description */}
+                <Typography
+                    sx={{
+                        color: 'rgba(185, 185, 186, 1)',
+                        fontFamily: 'Inter, sans-serif',
+                        fontWeight: 400,
+                        fontSize: { xs: 13, md: 16 },
+                        lineHeight: { xs: '20px', md: '25.6px' },
+                        textAlign: { xs: 'center', md: 'left' },
+                        mb: { xs: 1, md: 2 },
+                        width: '100%',
+                    }}
+                >
+                    Moi Pay is a cutting-edge fintech solution built to simplify financial tasks for Sri Lankans. Whether it's managing daily transactions, paying bills, or accessing multiple bank services through a single platform, Moi Pay empowers users with intuitive, secure, and fast tools to take control of their financial lives. Designed for convenience and trust, Moi Pay bridges modern technology with real-world financial needs.
+                </Typography>
+                {/* Points */}
+                <Stack
+                    spacing={{ xs: 1, md: 2 }}
+                    sx={{
+                        width: '100%',
+                        mt: { xs: 1, md: 2 },
+                    }}
+                >
+                    {points.map((point, idx) => (
+                        <Box key={idx} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5 }}>
+                            <Box
+                                sx={{
+                                    width: { xs: 12, md: 16 },
+                                    height: { xs: 12, md: 16 },
+                                    bgcolor: '#87DFCA',
+                                    borderRadius: 1,
+                                    mt: 0.7,
+                                    flexShrink: 0,
+                                }}
+                            />
+                            <Typography
+                                sx={{
+                                    color: '#fff',
+                                    fontFamily: '"Inter", sans-serif',
+                                    fontWeight: 400,
+                                    fontSize: { xs: 14, md: 24 },
+                                    lineHeight: { xs: '22px', md: '32px' },
+                                }}
+                            >
+                                {point}
+                            </Typography>
+                        </Box>
+                    ))}
+                </Stack>
+            </Box>
+        </Box>
+    );
+};
 
 export default HomeHeroSection;                    
