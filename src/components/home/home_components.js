@@ -54,8 +54,13 @@ const HomeHeroSection = () => {
                     flex: 1,
                 }}
             >
-                {/* Left Content */}
-                <Box sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 4 }}>
+                {/* Left Content - Desktop View */}
+                <Box sx={{ 
+                    flex: 1, 
+                    display: { xs: "none", md: "flex" }, 
+                    flexDirection: "column", 
+                    gap: 4 
+                }}>
                     <Typography
                         variant="body1"
                         sx={{
@@ -64,8 +69,8 @@ const HomeHeroSection = () => {
                             fontFamily: 'Inter, sans-serif',
                             fontWeight: 400,
                             lineHeight: '25.6px',
-                            width: '100%',
-                            maxWidth: 450,
+                            width:  '100%',
+                            maxWidth: { xs: 150, md: 450 },
                             textAlign: 'left',
                             alignSelf: 'flex-start',
                             wordWrap: 'break-word',
@@ -220,7 +225,8 @@ const HomeHeroSection = () => {
                         </Box>
                     </Stack>
                 </Box>
-                {/* Right Content: Phone Mockups */}
+
+                {/* Mobile Images - Show first on mobile */}
                 <Box sx={{
                     flex: 1,
                     display: "flex",
@@ -228,7 +234,8 @@ const HomeHeroSection = () => {
                     justifyContent: "center",
                     position: "relative",
                     minHeight: 350,
-                    gap: 0
+                    gap: 0,
+                    order: { xs: 1, md: 2 }
                 }}>
                     {/* Large Phone - Left Side */}
                     <Box
@@ -275,6 +282,186 @@ const HomeHeroSection = () => {
                             }}
                         />
                     </Box>
+                </Box>
+
+                {/* Mobile Content - Reordered for mobile view */}
+                <Box sx={{ 
+                    flex: 1, 
+                    display: { xs: "flex", md: "none" }, 
+                    flexDirection: "column", 
+                    gap: 4,
+                    order: { xs: 2, md: 1 }
+                }}>
+                    {/* App Store Buttons - Show second on mobile */}
+                    <Stack
+                        direction="row"
+                        spacing={2}
+                        mt={1}
+                        sx={{
+                            alignSelf: 'center',
+                            width: '100%',
+                            maxWidth: 450,
+                            justifyContent: 'center'
+                        }}
+                    >
+                        {/* Custom App Store Button */}
+                        <Box
+                            sx={{
+                                px: { xs: 0.5, md: 3 },
+                                py: 1,
+                                borderRadius: 60,
+                                outline: '1px #87DFCA solid',
+                                outlineOffset: '-1px',
+                                display: 'inline-flex',
+                                flexDirection: 'column',
+                                justifyContent: 'flex-start',
+                                alignItems: 'flex-start',
+                                gap: 1.25,
+                                width: { xs: 150, md: 200 },
+                                height: { xs: 50, md: 50 },
+                                cursor: 'pointer',
+                                background: 'transparent',
+                                transition: 'box-shadow 0.2s',
+                                '&:hover': {
+                                    boxShadow: '0 2px 12px 0 #87DFCA33',
+                                },
+                            }}
+                        >
+                            <Box sx={{ height: 31, display: 'inline-flex', alignItems: 'center', gap: 0, paddingLeft: 2 }}>
+                                <Box sx={{
+                                    width: { xs: 25, md: 30.72 },
+                                    height: { xs: 25, md: 30.72 },
+                                    position: 'relative',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                }}>
+                                    <FaApple color='linear-gradient(90deg, #87DFCA 0%, #A3AFFD 50%, #8ABEFC 100%)' size={25} style={{ position: 'absolute', left: '40%', top: '50%', transform: 'translate(-50%, -50%)' }} />
+
+                                </Box>
+                                <Typography
+                                    sx={{
+                                        width: { xs: 100, md: 127 },
+                                        height: { xs: 12, md: 30 },
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        color: '#F4F4F4',
+                                        fontSize: { xs: 12, md: 24 },
+                                        fontFamily: '"Wix Madefor Display", sans-serif',
+                                        fontWeight: 400,
+                                        lineHeight: '38.4px',
+                                        ml: 2.5,
+                                    }}
+                                >
+                                    App Store
+                                </Typography>
+                            </Box>
+                        </Box>
+                        {/* Play Store Button */}
+                        <Box
+                            sx={{
+                                px: { xs: 0.5, md: 3 },
+                                py: 1,
+                                borderRadius: 60,
+                                outline: '1px #87DFCA solid',
+                                outlineOffset: '-1px',
+                                display: 'inline-flex',
+                                flexDirection: 'column',
+                                justifyContent: 'flex-start',
+                                alignItems: 'flex-start',
+                                gap: 1.25,
+                                width: { xs: 150, md: 200 },
+                                height: { xs: 50, md: 50 },
+                                cursor: 'pointer',
+                                background: 'transparent',
+                                transition: 'box-shadow 0.2s',
+                                '&:hover': {
+                                    boxShadow: '0 2px 12px 0 #87DFCA33',
+                                },
+                            }}
+                        >
+                            <Box sx={{ height: 31, display: 'inline-flex', alignItems: 'center', gap: 0, paddingLeft: 2 }}>
+                                <Box sx={{
+                                    width: { xs: 25, md: 30.72 },
+                                    height: { xs: 25, md: 30.72 },
+                                    position: 'relative',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                }}>
+                                    <FaGooglePlay color='linear-gradient(90deg, #87DFCA 0%, #A3AFFD 50%, #8ABEFC 100%)' size={25} style={{ position: 'absolute', left: '40%', top: '50%', transform: 'translate(-50%, -50%)' }} />
+
+                                </Box>
+                                <Typography
+                                    sx={{
+                                        width: { xs: 100, md: 127 },
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        color: '#F4F4F4',
+                                        fontSize: { xs: 12, md: 24 },
+                                        fontFamily: '"Wix Madefor Display", sans-serif',
+                                        fontWeight: 400,
+                                        ml: 2.5,
+                                    }}
+                                >
+                                    Play Store
+                                </Typography>
+                            </Box>
+                        </Box>
+                    </Stack>
+
+                    {/* Description - Show third on mobile */}
+                    <Typography
+                        variant="body1"
+                        sx={{
+                            color: '#E1E1E1',
+                            fontSize: { xs: 14, md: 16 },
+                            fontFamily: 'Inter, sans-serif',
+                            fontWeight: 400,
+                            lineHeight: '25.6px',
+                            width: '100%',
+                            maxWidth: 450,
+                            textAlign: 'center',
+                            alignSelf: 'center',
+                            wordWrap: 'break-word',
+                            mb: 2,
+                            mx: { xs: 4, md: 0 }
+                        }}
+                    >
+                        Moi Pay is a cutting-edge fintech solution built to simplify financial tasks for Sri Lankans.<br />
+                        Whether it's managing daily transactions, paying bills, or accessing multiple bank services through a single platform, Moi Pay empowers users with intuitive, secure, and fast tools to take control of their financial lives. Designed for convenience and trust, Moi Pay bridges modern technology with real-world financial needs.
+                    </Typography>
+
+                    {/* Avatar Stack - Show last on mobile */}
+                    <Stack
+                        direction="row"
+                        alignItems="center"
+                        spacing={2}
+                        mt={3}
+                        sx={{
+                            alignSelf: 'center',
+                            width: '100%',
+                            maxWidth: 600,
+                            justifyContent: 'center'
+                        }}
+                    >
+                        <Stack direction="row" spacing={-1}>
+                            {avatars.map((src, idx) => (
+                                <Avatar
+                                    key={idx}
+                                    src={src}
+                                    alt="avatar"
+                                    sx={{ width: { xs: 25, md: 50 }, height: { xs: 25, md: 50 }, border: '2px solid #181A20', zIndex: avatars.length - idx }}
+                                />
+                            ))}
+                        </Stack>
+                        <Box>
+                            <Typography fontWeight={600} fontSize={{ xs: 13, md: 20 }} fontFamily='"Wix Madefor Display", sans-serif' variant="body1">1k+ business and growing</Typography>
+                            <Typography fontSize={{ xs: 12, md: 16 }} fontFamily='"Wix Madefor Display", sans-serif' variant="caption" color="rgba(147, 147, 152, 1)" fontWeight={600}>
+                                Backed by people's first finance solution
+                            </Typography>
+                        </Box>
+                    </Stack>
                 </Box>
             </Box>
         </Box>
