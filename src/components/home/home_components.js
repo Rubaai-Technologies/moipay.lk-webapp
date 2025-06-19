@@ -5,6 +5,7 @@ import moipayPhone from "../../assets/home/home_screen.png";
 import whyMoiPay from "../../assets/home/random_img_01.png";
 import PayWithEaseSection from "./PayWithEaseSection";
 import PartnerComponent from "./PartnerComponent";
+import AllInOneFinancialSolution from "./AllInOneFinancialSolution";
 const avatars = [
     "https://randomuser.me/api/portraits/men/32.jpg",
     "https://randomuser.me/api/portraits/women/44.jpg",
@@ -23,7 +24,7 @@ const HomeHeroSection = () => {
                     flexDirection: "column",
                     px: { xs: 2, md: 6 },
                     py: 4,
-                    mx: { xs: 1, md: 20 },
+                    mx: { xs: 1, md: 15 },
 
                 }}
             >
@@ -475,6 +476,7 @@ const HomeHeroSection = () => {
                 <PayWithEaseSection />
             </Box>
             <PartnerComponent />
+            <AllInOneFinancialSolution />
         </Box>
     );
 };
