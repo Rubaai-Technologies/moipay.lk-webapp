@@ -3,7 +3,7 @@ import { Box, Typography, Stack, Avatar } from "@mui/material";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import moipayPhone from "../../assets/home/home_screen.png";
 import whyMoiPay from "../../assets/home/random_img_01.png";
-
+import PayWithEaseSection from "./PayWithEaseSection";
 const avatars = [
     "https://randomuser.me/api/portraits/men/32.jpg",
     "https://randomuser.me/api/portraits/women/44.jpg",
@@ -470,6 +470,7 @@ const HomeHeroSection = () => {
             </Box>
             <RubaaiRevolutionSection />
             <WhyMoiPaySection />
+            <PayWithEaseSection />
         </Box>
     );
 };
