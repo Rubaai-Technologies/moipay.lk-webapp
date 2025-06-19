@@ -28,7 +28,7 @@ const HomeHeroSection = () => {
                 sx={{
                     textAlign: 'center',
                     color: '#F4F4F4',
-                    fontSize: { xs: 35, sm: 45, md: 55 },
+                    fontSize: { xs: 24, sm: 45, md: 55 },
                     fontFamily: '"Wix Madefor Display", sans-serif',
                     fontWeight: 700,
                     lineHeight: { xs: '48px', sm: '68px', md: '88px' },
@@ -60,7 +60,7 @@ const HomeHeroSection = () => {
                         variant="body1"
                         sx={{
                             color: '#E1E1E1',
-                            fontSize: 16,
+                            fontSize: { xs: 14, md: 16 },
                             fontFamily: 'Inter, sans-serif',
                             fontWeight: 400,
                             lineHeight: '25.6px',
@@ -90,7 +90,7 @@ const HomeHeroSection = () => {
                         {/* Custom App Store Button */}
                         <Box
                             sx={{
-                                px: 3,
+                                px: { xs: 0.5, md: 3 },
                                 py: 2.25,
                                 borderRadius: 60,
                                 outline: '1px #87DFCA solid',
@@ -122,12 +122,12 @@ const HomeHeroSection = () => {
                                 </Box>
                                 <Typography
                                     sx={{
-                                        width: 127,
-                                        height: 30,
+                                        width: { xs: 100, md: 127 },
+                                        height: { xs: 12, md: 30 },
                                         display: 'flex',
                                         alignItems: 'center',
                                         color: '#F4F4F4',
-                                        fontSize: '24px',
+                                        fontSize: { xs: 12, md: 24 },
                                         fontFamily: '"Wix Madefor Display", sans-serif',
                                         fontWeight: 400,
                                         lineHeight: '38.4px',
@@ -141,7 +141,7 @@ const HomeHeroSection = () => {
                         {/* Play Store Button (unchanged) */}
                         <Box
                             sx={{
-                                px: 3,
+                                px: { xs: 0.5, md: 3 },
                                 py: 2.25,
                                 borderRadius: 60,
                                 outline: '1px #87DFCA solid',
@@ -173,12 +173,12 @@ const HomeHeroSection = () => {
                                 </Box>
                                 <Typography
                                     sx={{
-                                        width: 127,
-                                        height: 30,
+                                        width: { xs: 100, md: 127 },
+                                        height: { xs: 12, md: 30 },
                                         display: 'flex',
                                         alignItems: 'center',
                                         color: '#F4F4F4',
-                                        fontSize: 24,
+                                        fontSize: { xs: 12, md: 24 },
                                         fontFamily: '"Wix Madefor Display", sans-serif',
                                         fontWeight: 400,
                                         lineHeight: '38.4px',
@@ -208,13 +208,13 @@ const HomeHeroSection = () => {
                                     key={idx}
                                     src={src}
                                     alt="avatar"
-                                    sx={{ width: 50, height: 50, border: '2px solid #181A20', zIndex: avatars.length - idx }}
+                                    sx={{ width: { xs: 25, md: 50 }, height: { xs: 25, md: 50 }, border: '2px solid #181A20', zIndex: avatars.length - idx }}
                                 />
                             ))}
                         </Stack>
                         <Box>
-                            <Typography fontWeight={600} fontSize={20} fontFamily='"Wix Madefor Display", sans-serif' variant="body1">1k+ business and growing</Typography>
-                            <Typography fontSize={16} fontFamily='"Wix Madefor Display", sans-serif' variant="caption" color="rgba(147, 147, 152, 1)" fontWeight={600}>
+                            <Typography fontWeight={600} fontSize={{ xs: 13, md: 20 }} fontFamily='"Wix Madefor Display", sans-serif' variant="body1">1k+ business and growing</Typography>
+                            <Typography fontSize={{ xs: 12, md: 16 }} fontFamily='"Wix Madefor Display", sans-serif' variant="caption" color="rgba(147, 147, 152, 1)" fontWeight={600}>
                                 Backed by people's first finance solution
                             </Typography>
                         </Box>
