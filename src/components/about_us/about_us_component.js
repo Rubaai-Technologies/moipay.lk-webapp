@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Stack, Button, Grid } from '@mui/material';
 import { FaArrowRight, FaLock, FaShieldAlt, FaDollarSign, FaUsers, FaGlobe, FaBtc } from 'react-icons/fa';
 import aboutUsImage from '../../assets/about_us/random_img_01.png';
+import randomImg02 from '../../assets/about_us/random_img_02.png';
 
 const AboutUsComponent = () => {
     const features = [
@@ -184,7 +185,7 @@ const AboutUsComponent = () => {
 
     const StatsSection = () => (
         <Box sx={{ py: { xs: 6, md: 10 } }}>
-            <Grid container spacing={{ xs: 4, md: 3 }}>
+            <Grid container alignItems="center" justifyContent="center" spacing={{ xs: 4, md: 3 }}>
                 {statsData.map((stat, index) => (
                     <Grid item xs={12} sm={6} md={3} key={index}>
                         <Stack
@@ -366,9 +367,70 @@ const AboutUsComponent = () => {
 
                 {/* Stats Section */}
                 <StatsSection />
+                <PartnerwithusComponent />
             </Box>
         </Box>
     );
+
+
 };
+
+const PartnerwithusComponent = () => (
+    <Box sx={{ maxWidth: '100%', mx: 'auto', mb: 8 }}>
+        <Grid flexDirection={{ xs: 'column', md: 'row' }} container spacing={6}  justifyContent="center">
+            <Grid item maxWidth={{ xs: '100%', md: '50%' }} flexDirection={{ xs: 'column', md: 'row' }} xs={12} md={6} >
+                <Typography variant="subtitle1" color="rgba(161, 161, 166, 1)" sx={{ mb: 1, fontFamily: '"Inter", sans-serif', fontSize: { xs: '14px', md: '24px' } }}>
+                    Why Partner with Rubaai?
+                </Typography>
+                <Typography variant="h3" color="#fff" fontWeight={700} sx={{
+                    mb: 3,
+                    lineHeight: 1.2,
+                    fontSize: { xs: '24px', md: '64px' },
+                    fontFamily: '"Wix Madefor Display", sans-serif'
+                }}>
+                    Partner With Us.
+                </Typography>
+                <Typography maxWidth={{ xs: '100%', md: '50%' }} variant="body1" color="#d1d5db" sx={{
+                    mb: 1, fontSize: { xs: '14px', md: '16px' }, fontFamily: '"Wix Madefor Display", sans-serif', textAlign: 'left'
+                }}>
+                    At Rubaai, we are committed to fostering partnerships that create shared success and
+                    drive innovation. Whether you're a merchant, financial institution, technology provider, or
+                    community organization, partnering with us means becoming part of a collaborative
+                    network dedicated to delivering impactful and future-ready financial solutions.
+                </Typography>
+                <Button
+                    variant="outlined"
+                    sx={{
+                        alignSelf: { xs: 'center', md: 'flex-start' },
+                        color: '#fff',
+                        borderColor: 'rgba(191, 158, 254, 1)',
+                        borderRadius: '50px',
+                        px: 3,
+                        py: 1.5,
+                        textTransform: 'none',
+                        fontSize: { xs: 14, md: 16 },
+                        fontFamily: '"Inter", sans-serif',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 1,
+                        '&:hover': {
+                            borderColor: '#87DFCA',
+                            bgcolor: 'rgba(135, 223, 202, 0.1)'
+                        },
+                        mt: 4
+                    }}
+                >
+                    Join with us
+                    <FaArrowRight style={{ transform: 'rotate(-45deg)' }} />
+                </Button>
+            </Grid>
+            <Grid item md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
+                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: 3, height: '100%' }}>
+                    <img src={randomImg02} alt="Business meeting" style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }} />
+                </Box>
+            </Grid>
+        </Grid>
+    </Box>
+);
 
 export default AboutUsComponent;
