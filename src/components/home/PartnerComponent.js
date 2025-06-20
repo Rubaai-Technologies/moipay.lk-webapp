@@ -35,11 +35,10 @@ const PartnerComponent = () => (
             sx={{
                 color: 'rgba(147, 147, 152, 1)',
                 fontSize: { xs: '14px', md: '19.6px' },
-                textAlign: 'justify',
+                textAlign: 'center',
                 marginTop: '0.2rem',
                 lineHeight: { xs: '20px', md: '20.4px' },
                 marginBottom: '1rem',
-                textAlign: 'center',
             }}
         >
             We're true partners – not vendors. Our relationships with our clients are long term and rewarding – don't take our word for it.
