@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import ContactUsComponent from '../components/contact_us/contact_us_component';
 
-export default function Contact() {
-  return (
-    <div className="flex flex-1 items-center justify-center h-[70vh]">
-      <h1 className="text-3xl font-bold text-center">Contact Us</h1>
-    </div>
-  );
-} 
+export default function ContactUsScreen() {
+    return (
+        <Fragment>
+            <ContactUsComponent />
+        </Fragment>
+    );
+}
