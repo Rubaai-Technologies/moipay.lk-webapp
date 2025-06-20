@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Typography, Stack, Button } from '@mui/material';
+import { Box, Typography, Stack, Button, Grid } from '@mui/material';
+import { FaArrowRight, FaLock, FaShieldAlt, FaDollarSign, FaUsers, FaGlobe, FaBtc } from 'react-icons/fa';
 import aboutUsImage from '../../assets/about_us/random_img_01.png';
 
 const AboutUsComponent = () => {
@@ -17,6 +18,29 @@ const AboutUsComponent = () => {
         'Easily transfer business funds to any bank',
         'Save time by scheduling recurring business payments',
         'Interactive graphs show your financial performance.'
+    ];
+
+    const statsData = [
+        {
+            icon: <FaUsers />,
+            statistic: '55 + Million',
+            description: 'Personal customers globally'
+        },
+        {
+            icon: <FaLock />,
+            statistic: '500 k+',
+            description: 'Business customers globally'
+        },
+        {
+            icon: <FaGlobe />,
+            statistic: '2',
+            description: 'countries and regions supported'
+        },
+        {
+            icon: <FaBtc />,
+            statistic: '36',
+            description: 'in-app currencies supported'
+        }
     ];
 
     const getBoxStyle = (index) => {
@@ -155,6 +179,40 @@ const AboutUsComponent = () => {
                 <circle cx="12" cy="12" r="11" stroke="currentColor" strokeWidth="1" />
                 <path d="M8 16L16 8M16 8H10M16 8V14" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
+        </Box>
+    );
+
+    const StatsSection = () => (
+        <Box sx={{ py: { xs: 6, md: 10 } }}>
+            <Grid container spacing={{ xs: 4, md: 3 }}>
+                {statsData.map((stat, index) => (
+                    <Grid item xs={12} sm={6} md={3} key={index}>
+                        <Stack
+                            spacing={2}
+                            sx={{
+                                bgcolor: 'rgba(25, 25, 26, 1)',
+                                width: { xs: '100%', md: '280px' },
+                                minWidth: { xs: '280px' },
+                                borderRadius: '16px',
+                                p: { xs: 3, md: 4 },
+                                height: '100%',
+                                justifyContent: 'center',
+                                alignItems: 'flex-start'
+                            }}
+                        >
+                            <Box sx={{ fontSize: '40px', color: '#fff', mb: 1 }}>
+                                {stat.icon}
+                            </Box>
+                            <Typography variant="h3" sx={{ color: '#fff', fontFamily: '"Wix Madefor Display", sans-serif', fontWeight: 600, fontSize: { xs: '2rem', md: '32px' } }}>
+                                {stat.statistic}
+                            </Typography>
+                            <Typography sx={{ color: 'rgba(185, 185, 186, 1)', fontSize: '16px', lineHeight: 1.4 }}>
+                                {stat.description}
+                            </Typography>
+                        </Stack>
+                    </Grid>
+                ))}
+            </Grid>
         </Box>
     );
 
@@ -305,6 +363,9 @@ const AboutUsComponent = () => {
                     {/* Business Feature Component */}
                     <BusinessFeatureComponent />
                 </Box>
+
+                {/* Stats Section */}
+                <StatsSection />
             </Box>
         </Box>
     );
