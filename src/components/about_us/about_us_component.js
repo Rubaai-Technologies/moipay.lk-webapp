@@ -4,6 +4,7 @@ import { FaArrowRight, FaLock, FaShieldAlt, FaDollarSign, FaUsers, FaGlobe, FaBt
 import aboutUsImage from '../../assets/about_us/random_img_01.png';
 import randomImg02 from '../../assets/about_us/random_img_02.png';
 import payWithEaseImage from '../../assets/about_us/random_img_03.png';
+import AllInOneFinancialSolution from '../home/AllInOneFinancialSolution';
 
 const AboutUsComponent = () => {
     const features = [
@@ -370,6 +371,7 @@ const AboutUsComponent = () => {
                 <StatsSection />
                 <PartnerwithusComponent />
                 <PayWithEaseComponent />
+                <AllInOneFinancialSolution />
             </Box>
         </Box>
     );
