@@ -200,7 +200,8 @@ const AboutUsComponent = () => {
                                 p: { xs: 3, md: 4 },
                                 height: '100%',
                                 justifyContent: 'center',
-                                alignItems: 'flex-start'
+                                alignItems: 'flex-start',
+                                maxHeight: { xs: '100%', md: '200px' }
                             }}
                         >
                             <Box sx={{ fontSize: '40px', color: '#fff', mb: 1 }}>
