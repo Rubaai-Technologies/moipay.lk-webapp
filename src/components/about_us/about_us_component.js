@@ -3,6 +3,7 @@ import { Box, Typography, Stack, Button, Grid } from '@mui/material';
 import { FaArrowRight, FaLock, FaShieldAlt, FaDollarSign, FaUsers, FaGlobe, FaBtc } from 'react-icons/fa';
 import aboutUsImage from '../../assets/about_us/random_img_01.png';
 import randomImg02 from '../../assets/about_us/random_img_02.png';
+import payWithEaseImage from '../../assets/about_us/random_img_03.png';
 
 const AboutUsComponent = () => {
     const features = [
@@ -368,6 +369,7 @@ const AboutUsComponent = () => {
                 {/* Stats Section */}
                 <StatsSection />
                 <PartnerwithusComponent />
+                <PayWithEaseComponent />
             </Box>
         </Box>
     );
@@ -377,7 +379,7 @@ const AboutUsComponent = () => {
 
 const PartnerwithusComponent = () => (
     <Box sx={{ maxWidth: '100%', mx: 'auto', mb: 8 }}>
-        <Grid flexDirection={{ xs: 'column', md: 'row' }} container spacing={6}  justifyContent="center">
+        <Grid flexDirection={{ xs: 'column', md: 'row' }} container spacing={6} justifyContent="center">
             <Grid item maxWidth={{ xs: '100%', md: '50%' }} flexDirection={{ xs: 'column', md: 'row' }} xs={12} md={6} >
                 <Typography variant="subtitle1" color="rgba(161, 161, 166, 1)" sx={{ mb: 1, fontFamily: '"Inter", sans-serif', fontSize: { xs: '14px', md: '24px' } }}>
                     Why Partner with Rubaai?
@@ -432,5 +434,99 @@ const PartnerwithusComponent = () => (
         </Grid>
     </Box>
 );
+
+const PayWithEaseComponent = () => {
+    const features = [
+        {
+            title: 'Expense & Revenue Tracking',
+            description: 'Track daily, weekly, and monthly expenses and income with interactive graphs and visual summaries to understand cash flow and business performance.'
+        },
+        {
+            title: 'Scheduled Transactions',
+            description: 'Schedule recurring payments and transfers to save time and avoid missed deadlines'
+        },
+        {
+            title: 'Send Money to Bank Accounts',
+            description: 'Easily transfer business funds to any bank account.'
+        }
+    ];
+
+    return (
+        <Box sx={{ py: { xs: 6, md: 10 }, textAlign: 'center', maxWidth: '100%', mx: 'auto' }}>
+            <Box sx={{ maxWidth: '1000px', mx: 'auto', textAlign: 'center', mb: 4 }}>
+                <Typography
+                    variant="h2"
+                    sx={{
+                        color: '#F4F4F4',
+                        fontSize: { xs: '24px', md: '54px' },
+                        fontFamily: '"Wix Madefor Display", sans-serif',
+                        fontWeight: 600,
+                        lineHeight: 1.2,
+                        mb: 2,
+                    }}
+                >
+                    Split bills, schedule transfers, pay with ease all in one app
+                </Typography>
+                <Typography
+                    sx={{
+                        color: 'rgba(161, 161, 166, 1)',
+                        fontSize: { xs: 14, md: '32px' },
+                        fontFamily: 'Inter, sans-serif',
+                        lineHeight: 1.6,
+                        mb: 4
+                    }}
+                >
+                    Our global mission is for every person and business to do all things money spending, saving, investing, borrowing, managing, and more in just a few taps.
+                </Typography>
+            </Box>
+
+            <Box
+                sx={{
+                    my: { xs: 4, md: 6 },
+                    borderRadius: '16px',
+                    overflow: 'hidden',
+                    mx: 'auto',
+                    maxWidth: '900px'
+                }}
+            >
+                <img
+                    src={payWithEaseImage}
+                    alt="Pay with ease"
+                    style={{
+                        width: '100%',
+                        height: 'auto',
+                        objectFit: 'cover',
+                        display: 'block'
+                    }}
+                />
+            </Box>
+
+            <Box sx={{ maxWidth: '3000px', mx: 'auto', mt: 6 }}>
+                <Stack spacing={4}>
+                    {features.map((feature, index) => (
+                        <Box key={index} sx={{ textAlign: { xs: 'left', md: index === 1 ? 'right' : 'left' } }}>
+                            <Typography variant="h5" sx={{
+                                color: '#FFFFFF',
+                                fontFamily: '"Inter", sans-serif',
+                                fontSize: { xs: '24px', md: '48px' },
+                                mb: 1,
+                            }}>
+                                {feature.title}
+                            </Typography>
+                            <Typography sx={{
+                                color: 'rgba(161, 161, 166, 1)',
+                                fontSize: { xs: 14, md: '32px' },
+                                fontFamily: 'Inter, sans-serif',
+                                lineHeight: 1.6,
+                            }}>
+                                {feature.description}
+                            </Typography>
+                        </Box>
+                    ))}
+                </Stack>
+            </Box>
+        </Box>
+    );
+};
 
 export default AboutUsComponent;
