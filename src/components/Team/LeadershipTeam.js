@@ -1,11 +1,42 @@
 import React from 'react';
-import { Box, Container, Typography, Grid } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import Ganeshwaran from '../../assets/home/ganeswaran.jpg';
 import Croos from '../../assets/home/croos.jpg';
 import Joice from '../../assets/home/joice.jpg';
 import Roman from '../../assets/home/roman.png';
 
 const LeadershipTeam = () => {
+    const teamMembers = [
+        {
+            id: 1,
+            name: "E Ganeshwaran",
+            position: "CEO and Founder",
+            image: Ganeshwaran,
+            alt: "E Ganeshwaran"
+        },
+        {
+            id: 2,
+            name: "I Andrewson Croos",
+            position: "CTO",
+            image: Croos,
+            alt: "I Andrewson Croos"
+        },
+        {
+            id: 3,
+            name: "J Joice Peries",
+            position: "GM",
+            image: Joice,
+            alt: "J Joice Peries"
+        },
+        {
+            id: 4,
+            name: "Roman",
+            position: "Operations Manager",
+            image: Roman,
+            alt: "Roman"
+        }
+    ];
+
     return (
         <Container maxWidth="xl" sx={{ mt: 1, py: 1 }}>
             <Typography variant="h3" align='center' color="#fff" fontWeight={600} sx={{
@@ -40,8 +71,9 @@ const LeadershipTeam = () => {
                 Our global mission is for every person and business to do all things money spending, saving, investing, borrowing, managing, and more in just a few taps.
             </Box>
             
+            {/* Desktop/Web View - Horizontal Scroll */}
             <Box sx={{
-                display: 'flex',
+                display: { xs: 'none', md: 'flex' },
                 flexDirection: 'row',
                 justifyContent: 'start',
                 overflowX: 'auto',
@@ -51,19 +83,19 @@ const LeadershipTeam = () => {
                 msOverflowStyle: 'none',
                 '&::-webkit-scrollbar': { display: 'none' },
             }}>
-                <Grid item xs={12} md={4}>
-                    <Box sx={{
+                {teamMembers.map((member) => (
+                    <Box key={member.id} sx={{
                         position: 'relative',
                         width: '363px',
                         height: '474px',
                         borderRadius: '8px',
                         overflow: 'hidden',
                         boxShadow: 2,
-                        mx: 'auto',
+                        flexShrink: 0,
                     }}>
                         <img
-                            src={Ganeshwaran}
-                            alt="E Ganeshwaran"
+                            src={member.image}
+                            alt={member.alt}
                             style={{
                                 width: '100%',
                                 height: '100%',
@@ -86,28 +118,35 @@ const LeadershipTeam = () => {
                             }}
                         >
                             <Typography sx={{ fontWeight: 600, fontSize: 32, fontFamily: '"Inter", sans-serif' }}>
-                                E Ganeshwaran
+                                {member.name}
                             </Typography>
                             <Typography sx={{ fontWeight: 400, fontSize: 24, fontFamily: '"Inter", sans-serif', opacity: 0.85 }}>
-                                CEO and Founder
+                                {member.position}
                             </Typography>
                         </Box>
                     </Box>
-                </Grid>
+                ))}
+            </Box>
 
-                <Grid item xs={12} md={4}>
-                    <Box sx={{
+            {/* Mobile View - Column Layout */}
+            <Box sx={{
+                display: { xs: 'flex', md: 'none' },
+                flexDirection: 'column',
+                gap: 3,
+                px: 2,
+            }}>
+                {teamMembers.map((member) => (
+                    <Box key={member.id} sx={{
                         position: 'relative',
-                        width: '363px',
+                        width: '100%',
                         height: '474px',
                         borderRadius: '8px',
                         overflow: 'hidden',
                         boxShadow: 2,
-                        mx: 'auto',
                     }}>
                         <img
-                            src={Croos}
-                            alt="I Andrewson Croos"
+                            src={member.image}
+                            alt={member.alt}
                             style={{
                                 width: '100%',
                                 height: '100%',
@@ -129,101 +168,15 @@ const LeadershipTeam = () => {
                                 textAlign: 'left',
                             }}
                         >
-                            <Typography sx={{ fontWeight: 600, fontSize: 32, fontFamily: '"Inter", sans-serif' }}>
-                                I Andrewson Croos
+                            <Typography sx={{ fontWeight: 600, fontSize: 24, fontFamily: '"Inter", sans-serif' }}>
+                                {member.name}
                             </Typography>
-                            <Typography sx={{ fontWeight: 400, fontSize: 24, fontFamily: '"Inter", sans-serif', opacity: 0.85 }}>
-                                CTO
-                            </Typography>
-                        </Box>
-                    </Box>
-                </Grid>
-                <Grid item xs={12} md={4}>
-                    <Box sx={{
-                        position: 'relative',
-                        width: '363px',
-                        height: '474px',
-                        borderRadius: '8px',
-                        overflow: 'hidden',
-                        boxShadow: 2,
-                        mx: 'auto',
-                    }}>
-                        <img
-                            src={Joice}
-                            alt="J Joice Peries"
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                borderRadius: '8px',
-                                filter: 'brightness(0.6)',
-                                display: 'block',
-                            }}
-                        />
-                        <Box
-                            sx={{
-                                position: 'absolute',
-                                left: 0,
-                                bottom: 0,
-                                width: '100%',
-                                color: '#fff',
-                                px: 2,
-                                py: 2,
-                                textAlign: 'left',
-                            }}
-                        >
-                            <Typography sx={{ fontWeight: 600, fontSize: 32, fontFamily: '"Inter", sans-serif' }}>
-                                J Joice Peries
-                            </Typography>
-                            <Typography sx={{ fontWeight: 400, fontSize: 24, fontFamily: '"Inter", sans-serif', opacity: 0.85 }}>
-                                GM
+                            <Typography sx={{ fontWeight: 400, fontSize: 18, fontFamily: '"Inter", sans-serif', opacity: 0.85 }}>
+                                {member.position}
                             </Typography>
                         </Box>
                     </Box>
-                </Grid>
-                <Grid item xs={12} md={4}>
-                    <Box sx={{
-                        position: 'relative',
-                        width: '363px',
-                        height: '474px',
-                        borderRadius: '8px',
-                        overflow: 'hidden',
-                        boxShadow: 2,
-                        mx: 'auto',
-                    }}>
-                        <img
-                            src={Roman}
-                            alt="Roman"
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                borderRadius: '8px',
-                                filter: 'brightness(0.7)',
-                                display: 'block',
-                            }}
-                        />
-                        <Box
-                            sx={{
-                                position: 'absolute',
-                                left: 0,
-                                bottom: 0,
-                                width: '100%',
-                                color: '#fff',
-                                px: 2,
-                                py: 2,
-                                textAlign: 'left',
-                            }}
-                        >
-                            <Typography sx={{ fontWeight: 600, fontSize: 32, fontFamily: '"Inter", sans-serif' }}>
-                                Roman
-                            </Typography>
-                            <Typography sx={{ fontWeight: 400, fontSize: 24, fontFamily: '"Inter", sans-serif', opacity: 0.85 }}>
-                                Operations Manager
-                            </Typography>
-                        </Box>
-                    </Box>
-                </Grid>
+                ))}
             </Box>
         </Container>
     );
