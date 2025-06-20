@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import PoweredByComponent from './PoweredByComponent';
 import MeetTheTeam from './MeetTheTeam';
 import LeadershipTeam from './LeadershipTeam';
+import AllInOneFinancialSolution from '../home/AllInOneFinancialSolution';
 
 const OurTeamComponent = () => {
     return (
@@ -10,6 +11,7 @@ const OurTeamComponent = () => {
             <MeetTheTeam />
             <PoweredByComponent />
             <LeadershipTeam />
+            <AllInOneFinancialSolution />
         </Box>
     );
 };
