@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Stack, Button, Grid } from '@mui/material';
-import { FaArrowRight, FaLock, FaShieldAlt, FaDollarSign, FaUsers, FaGlobe, FaBtc } from 'react-icons/fa';
+import { FaArrowRight, FaLock, FaUsers, FaGlobe, FaBtc } from 'react-icons/fa';
 import aboutUsImage from '../../assets/about_us/random_img_01.png';
 import randomImg02 from '../../assets/about_us/random_img_02.png';
 import payWithEaseImage from '../../assets/about_us/random_img_03.png';
