@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography, IconButton, Button, Stack } from '@mui/material';
-import { FaApple, FaGooglePlay, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
+import { FaApple, FaGooglePlay, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import moipayLogo from '../../assets/logo/moipay.png';
 
 const Footer = () => {
@@ -201,7 +201,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/rubaai-technologies/"
                   target="_blank"
                   rel="noopener noreferrer" sx={{ borderRadius: '50px', border: '1px solid #3E3E3E', width: 40, height: 80, color: 'white', background: 'transparent', '&:hover': { background: '#232323' } }}>
-                  <FaTiktok size={24} />
+                  <FaLinkedin size={24} />
                 </IconButton>
                 <IconButton component="a"
                   href="https://youtube.com/@moipay-d3n?si=XWFXKjTnNhO3NgRl"
@@ -309,7 +309,7 @@ const Footer = () => {
               href="https://www.linkedin.com/company/rubaai-technologies/"
               target="_blank"
               rel="noopener noreferrer" sx={{ borderRadius: '50px', border: '1px solid #3E3E3E', width: 40, height: 80, color: 'white', background: 'transparent', '&:hover': { background: '#232323' } }}>
-              <FaTiktok size={24} />
+              <FaLinkedin size={24} />
             </IconButton>
             <IconButton component="a"
               href="https://youtube.com/@moipay-d3n?si=XWFXKjTnNhO3NgRl"
