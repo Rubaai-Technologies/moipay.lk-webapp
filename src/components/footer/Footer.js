@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, IconButton, Button, Stack } from '@mui/material';
-import { FaApple, FaGooglePlay, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
-import moipayLogo from '../assets/logo/moipay.png';
+import { FaApple, FaGooglePlay, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+import moipayLogo from '../../assets/logo/moipay.png';
 
 const Footer = () => {
   const footerLinks = {
@@ -178,7 +178,7 @@ const Footer = () => {
             </Box>
 
             {/* Third Row: Pricing, Contact us, and Social Icons */}
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 6 }}>
               <Box sx={{ display: 'flex', gap: 4 }}>
                 <Typography
                   sx={{
@@ -197,13 +197,22 @@ const Footer = () => {
               </Box>
 
               <Stack direction="row" spacing={2}>
-                <IconButton sx={{ borderRadius: '100px', border: '1px solid #3E3E3E', width: 44, height: 44, color: 'white', background: 'transparent', '&:hover': { background: '#232323' } }}>
-                  <FaTiktok size={24} />
+                <IconButton component="a"
+                  href="https://www.linkedin.com/company/rubaai-technologies/"
+                  target="_blank"
+                  rel="noopener noreferrer" sx={{ borderRadius: '50px', border: '1px solid #3E3E3E', width: 40, height: 80, color: 'white', background: 'transparent', '&:hover': { background: '#232323' } }}>
+                  <FaLinkedin size={24} />
                 </IconButton>
-                <IconButton sx={{ borderRadius: '100px', border: '1px solid #3E3E3E', width: 44, height: 44, color: 'white', background: 'transparent', '&:hover': { background: '#232323' } }}>
+                <IconButton component="a"
+                  href="https://youtube.com/@moipay-d3n?si=XWFXKjTnNhO3NgRl"
+                  target="_blank"
+                  rel="noopener noreferrer" sx={{ borderRadius: '50px', border: '1px solid #3E3E3E', width: 40, height: 80, color: 'white', background: 'transparent', '&:hover': { background: '#232323' } }}>
                   <FaYoutube size={24} />
                 </IconButton>
-                <IconButton sx={{ borderRadius: '100px', border: '1px solid #3E3E3E', width: 44, height: 44, color: 'white', background: 'transparent', '&:hover': { background: '#232323' } }}>
+                <IconButton component="a"
+                  href="https://www.instagram.com/rubaai_technologies?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw=="
+                  target="_blank"
+                  rel="noopener noreferrer" sx={{ borderRadius: '50px', border: '1px solid #3E3E3E', width: 40, height: 80, color: 'white', background: 'transparent', '&:hover': { background: '#232323' } }}>
                   <FaInstagram size={24} />
                 </IconButton>
               </Stack>
@@ -255,7 +264,7 @@ const Footer = () => {
                 color: '#F4F4F4',
                 borderColor: '#87DFCA',
                 borderRadius: 60,
-                px: 4,
+                px: 2,
                 py: 1.5,
                 fontFamily: 'Wix Madefor Display',
                 fontWeight: 400,
@@ -277,7 +286,7 @@ const Footer = () => {
                 color: '#F4F4F4',
                 borderColor: '#87DFCA',
                 borderRadius: 60,
-                px: 4,
+                px: 2,
                 py: 1.5,
                 fontFamily: 'Wix Madefor Display',
                 fontWeight: 400,
@@ -286,7 +295,7 @@ const Footer = () => {
                 textTransform: 'none',
                 display: 'flex',
                 alignItems: 'center',
-                gap: 1.5,
+                gap: 0.5,
                 '&:hover': { borderColor: '#A3AFFD', color: '#A3AFFD' },
               }}
               startIcon={<FaApple size={28} style={{ color: 'url(#appstore-gradient)' }} />}
@@ -296,13 +305,22 @@ const Footer = () => {
           </Box>
 
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 3, mb: 4 }}>
-            <IconButton sx={{ borderRadius: '100px', border: '1px solid #3E3E3E', width: 44, height: 44, color: 'white', background: 'transparent', '&:hover': { background: '#232323' } }}>
-              <FaTiktok size={24} />
+            <IconButton component="a"
+              href="https://www.linkedin.com/company/rubaai-technologies/"
+              target="_blank"
+              rel="noopener noreferrer" sx={{ borderRadius: '50px', border: '1px solid #3E3E3E', width: 40, height: 80, color: 'white', background: 'transparent', '&:hover': { background: '#232323' } }}>
+              <FaLinkedin size={24} />
             </IconButton>
-            <IconButton sx={{ borderRadius: '100px', border: '1px solid #3E3E3E', width: 44, height: 44, color: 'white', background: 'transparent', '&:hover': { background: '#232323' } }}>
+            <IconButton component="a"
+              href="https://youtube.com/@moipay-d3n?si=XWFXKjTnNhO3NgRl"
+              target="_blank"
+              rel="noopener noreferrer" sx={{ borderRadius: '50px', border: '1px solid #3E3E3E', width: 40, height: 80, color: 'white', background: 'transparent', '&:hover': { background: '#232323' } }}>
               <FaYoutube size={24} />
             </IconButton>
-            <IconButton sx={{ borderRadius: '100px', border: '1px solid #3E3E3E', width: 44, height: 44, color: 'white', background: 'transparent', '&:hover': { background: '#232323' } }}>
+            <IconButton component="a"
+              href="https://www.instagram.com/rubaai_technologies?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw=="
+              target="_blank"
+              rel="noopener noreferrer" sx={{ borderRadius: '50px', border: '1px solid #3E3E3E', width: 40, height: 80, color: 'white', background: 'transparent', '&:hover': { background: '#232323' } }}>
               <FaInstagram size={24} />
             </IconButton>
           </Box>
