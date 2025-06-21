@@ -30,7 +30,7 @@ const LeadershipTeam = () => {
         },
         {
             id: 4,
-            name: "Roman",
+            name: "Roman Figurado",
             position: "Operations Manager",
             image: Roman,
             alt: "Roman"
